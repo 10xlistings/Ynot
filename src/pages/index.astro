@@ -1,0 +1,49 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout>
+  <section
+    class="flex flex-col gap-8 h-screen w-screen items-center justify-evenly max-md:justify-center max-md:gap-6 max-sm:justify-around"
+  >
+    <div
+      style="clip-path: polygon(0 0, 0% 100%, 100% 0);"
+      class="top-left bg-gray-100 w-96 h-96 top-0 left-0 absolute max-md:hidden z-[-99999999]"
+    >
+    </div>
+    <div><img class="w-64" src="/logo.png" alt="" /></div>
+    <div class="max-sm:flex max-sm:flex-col max-sm:gap-6">
+      <div
+        class="main text-[7rem] font-extrabold max-md:text-[4rem] text-center max-sm:text-7xl"
+      >
+        Coming Soon
+      </div>
+      <div
+        class="text-center text-xl font-semibold text-gray-600 max-sm:text-lg"
+      >
+        Transforming Real Estate
+      </div>
+    </div>
+    <div class="flex flex-col gap-6 w-full items-center justify-center">
+      <span>Get Notified when the site is launched</span>
+      <div class="relative h-fit max-sm:flex max-sm:flex-col max-sm:gap-3">
+        <input
+          placeholder="Please enter your email address"
+          class="text-md target:outline-none focus-visible:outline-none p-5 rounded-lg bg-gray-200 w-96 pr-32 relative max-sm:p-4 max-sm:pr-4 max-sm:w-fit"
+          type="email"
+        />
+        <button
+          class="absolute font-bold text-md bg-yellow-300 p-4 rounded-lg right-1 top-1 max-sm:relative"
+          >Nofity Me</button
+        >
+      </div>
+    </div>
+    <div
+      style="clip-path: polygon(99% 0, 0% 100%, 100% 100%);
+	  "
+      class="top-left bg-gray-100 w-96 h-96 bottom-0 right-0 absolute max-md:hidden z-[-99999999]"
+    >
+    </div>
+  </section>
+</Layout>

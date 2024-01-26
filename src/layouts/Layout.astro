@@ -1,0 +1,107 @@
+---
+// interface Props {
+// 	title: string;
+// }
+
+// const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>YNot</title>
+    <link rel="stylesheet" href="../index.css" />
+  </head>
+  <body>
+    <slot />
+    <!-- gerg -->
+  </body>
+</html>
+<style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+  /* @tailwind base; */
+  /* @tailwind components; */
+  /* @tailwind utilities; */
+
+  body {
+    font-family: "Outfit", sans-serif;
+    user-select: none !important;
+    /* background-color: gray; */
+    /* background: #000; */
+  }
+  :root {
+    /* --background-color: #0C0C0C; */
+    --background-color: #0c0c0c;
+    --font-color: #ffffff;
+    --blue: rgba(0, 48, 104, 1);
+    /* --blue: red; */
+    /* --blue: rgb(0, 187, 255); */
+    --pink: rgba(220, 3, 255, 1);
+    /* --pink: hotpink; */
+    --dim-pink: rgba(220, 3, 255, 0.05);
+    --dim-blue: rgba(0, 48, 104, 0.3);
+    --linear-gradient: linear-gradient(
+      to right,
+      #fffb73,
+      #ffa33c,
+      #b15eff,
+      #3d30a2,
+      #fffb73
+    );
+    --heading: 2rem;
+    --primary-font: "Gloock", serif;
+    --secondary-font: "Syne", sans-serif;
+    /* --theme-gradient: linear-gradient() */
+  }
+  @keyframes textGradient {
+    from {
+      background-position: 0% center;
+    }
+
+    to {
+      background-position: -200% center;
+    }
+  }
+  .main {
+    position: relative;
+    animation: textGradient 15s linear infinite alternate-reverse;
+    /* animation-delay: 1s; */
+    background: var(--linear-gradient);
+    background-size: 1000%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  /* :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    background: #13151a;
+    background-size: 224px;
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  } */
+</style>
